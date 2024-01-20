@@ -24,27 +24,27 @@ public class Savings {
     // PROPERTIES ////////////////
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
-    @Column(name = "user_id")
-    private long userId;
+    @Column(name = "userId")
+    private Long userId;
 
-    @Column(name = "account_id")
-    private long accountId;
+    @Column(name = "accountId")
+    private Long accountId;
 
     @Column(name = "name")
     private String name;
 
-    @Column(name = "target_amount")
-    private Integer targetAmount;
+    @Column(name = "targetAmount")
+    private Double targetAmount;
 
-    @Column(name = "target_date")
+    @Column(name = "targetDate")
     private Date targetDate;
 
-    @Column(name = "created_on")
+    @Column(name = "createdOn")
     private Timestamp createdOn;
 
-    @Column(name = "updated_on")
+    @Column(name = "updatedOn")
     private Timestamp updatedOn;
 
     // DEFAULT CONSTRUCTOR ////////////////
@@ -52,7 +52,7 @@ public class Savings {
 
     // CONSTRUCTORS ////////////////
 
-    public Savings(long userId, long accountId, String name, Integer targetAmount, Date targetDate) {
+    public Savings(long userId, long accountId, String name, Double targetAmount, Date targetDate) {
         this.userId = userId;
         this.accountId = accountId;
         this.name = name;
@@ -93,11 +93,11 @@ public class Savings {
         this.name = name;
     }
 
-    public Integer getTargetAmount() {
+    public Double getTargetAmount() {
         return this.targetAmount;
     }
 
-    public void setTargetAmount(Integer targetAmount) {
+    public void setTargetAmount(Double targetAmount) {
         this.targetAmount = targetAmount;
     }
 

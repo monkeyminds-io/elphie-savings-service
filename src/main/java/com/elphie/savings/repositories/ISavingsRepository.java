@@ -26,14 +26,7 @@ import com.elphie.savings.models.Savings;
 // =============================================================================
 @Repository
 public interface ISavingsRepository extends JpaRepository<Savings, Long> {
-    
 
-    // Get Count of rows for filtered Savings list
-    int countByUserIdAndNameContaining(long userId, String name);
+    List<Savings> findByUserIdAndNameContaining(Long userId, String name);
 
-    // 
-    List<Savings> findByUserIdAndNameContaining(long userId, String name);
-
-    
-    // Add custome queries here...
 }
